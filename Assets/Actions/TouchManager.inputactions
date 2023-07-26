@@ -1,0 +1,34 @@
+{
+    "name": "TouchManager",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "0c8be9f5-ed69-4a70-9948-f94aee0a60fd",
+            "actions": [
+                {
+                    "name": "primaryTouch",
+                    "type": "Value",
+                    "id": "49708c75-4dae-410b-a86c-298f2df54805",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2fffbaa6-642a-4adc-84be-b7ff33378769",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "primaryTouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
