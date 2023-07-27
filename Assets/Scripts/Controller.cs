@@ -1,57 +1,80 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
 using Unity.AI;
+using Unity.VisualScripting;
 using UnityEngine.AI;
 
 public class Controller : MonoBehaviour
-{   
+{
     public LayerMask layerMask;
     [SerializeField] GameObject enemy;
     [SerializeField] NavMeshAgent player;
-    [SerializeField] private GameObject distraction;
     private Transform obstacle;
     private float ObstacleCurrentTime;
-
     private float obstacleReqTime;
+    
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<NavMeshAgent>();
         player.SetDestination(enemy.transform.position);
+        
     }
+
+    private void OnEnable()
+    {
+        // Messenger.AddListener(GameEvent.obstacleInstantiated,Sarch);
+         
+    }
+
+    private void OnDisable()
+    {
+        // Messenger.RemoveListener(GameEvent.obstacleInstantiated,Sarch);
+         
+    }
+
     public void Search()
     {
+        Debug.Log("Search called");
+
+
+
+        if (obstacle == null)
+        {
+            RaycastHit hit;
+
+
+            float distanceToObstacle = 0;
         
-       
+            if (Physics.SphereCast(transform.position, 0.5f, transform.forward, out hit, 10, layerMask))
+            {
+                distanceToObstacle = hit.distance;
+                Debug.Log(hit.transform.name);
+                Debug.Log("Obstacle detected");
+                obstacle = hit.collider.transform;
+                obstacleReqTime = obstacle.GetComponent<Obstacle>().obstacleTime;
+                ObstacleCurrentTime = 0f;
+                player.SetDestination(obstacle.position);
+            }
+        }
+
+        // Cast a sphere wrapping character controller 10 meters forward
+
+        // to see if it is about to hit anything.
         
-        RaycastHit hit;
+        
+
+            
 
         
-        float distanceToObstacle = 0;
-        
-        // Cast a sphere wrapping character controller 10 meters forward
-        
-        // to see if it is about to hit anything.
-        if(obstacle == null)
-        {
-            if (Physics.SphereCast(transform.position, 0.5f, transform.forward, out hit, 10,layerMask))
-        {
-            distanceToObstacle = hit.distance;
-            Debug.Log("Obstacle detected");
-            obstacle = hit.collider.transform;
-            obstacleReqTime = obstacle.GetComponent<Obstacle>().obstacleTime;
-            ObstacleCurrentTime = 0f;
-            player.SetDestination(obstacle.position);
-        }
-            
-        }
-        else
+       else
         {
             float dist = Vector3.Distance(player.transform.position, obstacle.position);
-            
-            if(dist<=(player.stoppingDistance+1f))
+
+            if (dist <= (player.stoppingDistance + 1f))
             {
                 if (ObstacleCurrentTime < obstacleReqTime)
                 {
@@ -60,7 +83,7 @@ public class Controller : MonoBehaviour
                 }
                 else
                 {
-                    
+
                     Debug.Log(dist);
                     Debug.Log("Obstacle Reached");
                     obstacle.gameObject.SetActive(false);
@@ -70,18 +93,54 @@ public class Controller : MonoBehaviour
                     obstacleReqTime = 0f;
 
                 }
-                
+
             }
         }
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-        Search();
+
     }
 
-    
-    
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.color=Color.red;
+    //     Gizmos.DrawSphere(transform.position,0.5f);
+    // }
+
+    void Sarch()
+    {
+        
+
+        // Update is called once per frame
+        
+
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        Debug.Log(other.transform.name + " LMAO");
+        if (other.transform.tag == "Distraction")
+        {
+            
+            obstacle = other.transform;
+            player.SetDestination(other.transform.position);
+            Search();
+            Invoke("SetObstacleNull",4f);
+            
+        }
+    }
+
+    void SetObstacleNull()
+    {
+
+        Destroy(obstacle.gameObject);
+        player.SetDestination(enemy.transform.position);
+
+    }
+    void Update()
+    {
+       
+
+    }
 }
