@@ -91,14 +91,14 @@ public class Controller : MonoBehaviour
                     player.SetDestination(enemy.transform.position);
                     ObstacleCurrentTime = 0f;
                     obstacleReqTime = 0f;
-
+                   
                 }
 
             }
         }
 
     }
-
+   
     // private void OnDrawGizmos()
     // {
     //     Gizmos.color=Color.red;
@@ -122,18 +122,21 @@ public class Controller : MonoBehaviour
         Debug.Log(other.transform.name + " LMAO");
         if (other.transform.tag == "Distraction")
         {
-            
+
             obstacle = other.transform;
             player.SetDestination(other.transform.position);
             Search();
-            Invoke("SetObstacleNull",4f);
-            
+            Invoke("SetObstacleNull",10f);
+
+        }
+        else {
+            Debug.Log("Game Finished");
         }
     }
-
+    
     void SetObstacleNull()
     {
-
+       
         Destroy(obstacle.gameObject);
         player.SetDestination(enemy.transform.position);
 

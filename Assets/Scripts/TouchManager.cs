@@ -16,24 +16,7 @@ public class TouchManager : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         primaryTouch = playerInput.actions["primaryTouch"];
     }
-    // Start is called before the first frame update
-    // void OnEnable()
-    // {
-    //     primaryTouch.performed+= OnTouchStarted;
-    // }
-    //
-    // void OnDisable()
-    // {
-    //     primaryTouch.performed -= OnTouchStarted;
-    // }
-
-    // private void OnTouchStarted(InputAction.CallbackContext context)
-    // {
-    //     if (primaryTouch.WasPerformedThisFrame())
-    //     {
-    //         }
-    //     }
-    // }
+    
     
     private Vector3 GetWorldTouchPosition(Vector2 touchPos)
     {
@@ -59,8 +42,11 @@ public class TouchManager : MonoBehaviour
                 Instantiate(obstacle, worldTouchPosition, Quaternion.identity);
                 // Messenger.Broadcast(GameEvent.obstacleInstantiated);
                 Debug.Log("Instantiated" + transform.name);
-                
             }
+        }
+        if(Input.GetMouseButtonUp(0))
+        {
+            gameObject.SetActive(false);
         }
     }
 }
