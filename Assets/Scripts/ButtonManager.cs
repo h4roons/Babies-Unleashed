@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject touchManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,8 @@ public class ButtonManager : MonoBehaviour
     }
     public void createObstactle()
     {
+       
+        
         touchManager.SetActive(true);
     }
 }

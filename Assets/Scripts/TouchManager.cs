@@ -1,23 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class TouchManager : MonoBehaviour
 {
-    public GameObject obstacle; 
-    PlayerInput playerInput;
-    InputAction primaryTouch;
-    
-    private void Awake()
-    {
-        playerInput = GetComponent<PlayerInput>();
-        primaryTouch = playerInput.actions["primaryTouch"];
-    }
-    
-    
+    public GameObject obstacle;
+    public float nextObstacle;
+    public float spawnRate;
+
+
     private Vector3 GetWorldTouchPosition(Vector2 touchPos)
     {
         Ray touchRay = Camera.main.ScreenPointToRay(touchPos);
@@ -39,9 +29,14 @@ public class TouchManager : MonoBehaviour
             Debug.Log("World Touch Position: " + worldTouchPosition);
             if (touchPosition != null)
             {
-                Instantiate(obstacle, worldTouchPosition, Quaternion.identity);
-                // Messenger.Broadcast(GameEvent.obstacleInstantiated);
-                Debug.Log("Instantiated" + transform.name);
+                if(Time.time>nextObstacle)
+                {
+                    nextObstacle= Time.time+ spawnRate;
+                    Debug.Log(nextObstacle);
+                    Instantiate(obstacle, worldTouchPosition, Quaternion.identity);
+                    // Messenger.Broadcast(GameEvent.obstacleInstantiated);
+                    Debug.Log("Instantiated" + transform.name);}
+                
             }
         }
         if(Input.GetMouseButtonUp(0))

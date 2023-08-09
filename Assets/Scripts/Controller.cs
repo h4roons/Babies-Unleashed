@@ -1,10 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
-using Unity.AI;
-using Unity.VisualScripting;
 using UnityEngine.AI;
 
 public class Controller : MonoBehaviour
