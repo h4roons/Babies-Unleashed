@@ -2,213 +2,181 @@ fileFormatVersion: 2
 guid: c3c26cd462d0562429c4ee054874491d
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 4913256589581243141
+    second: Box1578959046|Box1578959046|CINEMA_4D_Main|Layer0
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Arms.001
-    second: {fileID: 2100000, guid: bf12e96f9206f5443a155a5f40b617e9, type: 2}
+      name: Arms
+    second: {fileID: 2100000, guid: 46a5957df4f82ab41a2ba1bb9e358d78, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Ash
-    second: {fileID: 2100000, guid: f8934a692a447464c931c3f2b9fdc46c, type: 2}
+      name: Carpet
+    second: {fileID: 2100000, guid: 12b6969d738144a4e807e302a4ac590c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Background.001
-    second: {fileID: 2100000, guid: ca5859ecfbad3fa41b4fa6f93f9b7a67, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blurry Metal
-    second: {fileID: 2100000, guid: 860b1df48a7f34a4f89a9931f66f35de, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cardboard
-    second: {fileID: 2100000, guid: cc75509bd72d29d47b91ef3c4904bc3c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Chrome.003
-    second: {fileID: 2100000, guid: 847fa16367173be439d32c259f52a5b1, type: 2}
+      name: Clock
+    second: {fileID: 2100000, guid: ceb11605167c7c14e8a1cc11cd848a9c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Federspiel-01
-    second: {fileID: 2100000, guid: 368eddedda386e347ae37ca4c453ef25, type: 2}
+    second: {fileID: 2100000, guid: 45102ffeab1a2434a8c0dae57ebfa920, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Federspiel-02
-    second: {fileID: 2100000, guid: eb4f032752fed7643bee9d00aece3269, type: 2}
+    second: {fileID: 2100000, guid: 884da79e830873741a9304d050801ea9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Federspiel-03
-    second: {fileID: 2100000, guid: 4cdc2d1cb7d33e24d8d20ff94c7166d9, type: 2}
+    second: {fileID: 2100000, guid: 64b04dc52f125f149b90a71e54ebe6f2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass.002
-    second: {fileID: 2100000, guid: 921a47ffa3c603645bdad7449e51ab99, type: 2}
+      name: Green
+    second: {fileID: 2100000, guid: 7d064ad9fb7bc954a87859c4102999df, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Iron.008
-    second: {fileID: 2100000, guid: 22f34f3c721326d4f992634d4f415251, type: 2}
+      name: Hours
+    second: {fileID: 2100000, guid: b569a1308f209ea468a8ba91015f04b6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Lamp
-    second: {fileID: 2100000, guid: 1197c07c87d924a4caf9db38b6907830, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mat
-    second: {fileID: 2100000, guid: 59b65b7c8bd4af446a3f0ee434c86267, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mat.006
-    second: {fileID: 2100000, guid: e3ae2055007fde844b9203b21e9a6b2e, type: 2}
+    second: {fileID: 2100000, guid: b5a7f50a22899a14d84addcd50ab7180, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mat.1
-    second: {fileID: 2100000, guid: e40f9f81773aed9478c769cfebce9897, type: 2}
+    second: {fileID: 2100000, guid: ceb11605167c7c14e8a1cc11cd848a9c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: f55be69b217939049aa82ef5d99780d9, type: 2}
+      name: Moon
+    second: {fileID: 2100000, guid: 72c30459adf4c9c4b9f9af3e5eb349c9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 6ef8ce95cf9ec6e449a0c5f34630d58f, type: 2}
+      name: Shade
+    second: {fileID: 2100000, guid: ceb11605167c7c14e8a1cc11cd848a9c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.006
-    second: {fileID: 2100000, guid: 6fa599ca1182ac042814d99ea6f2cd66, type: 2}
+      name: Star
+    second: {fileID: 2100000, guid: 2033d40f2336ba24d8e7651d483413cd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.007
-    second: {fileID: 2100000, guid: 122cc88251f5de948bcdae381331e61e, type: 2}
+      name: Switch
+    second: {fileID: 2100000, guid: 24eb8ad3a62747b4b8eec009fef22c50, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.008
-    second: {fileID: 2100000, guid: b8b3f6fbddc78f144a733d157da8c4e0, type: 2}
+      name: Toy body
+    second: {fileID: 2100000, guid: eedb1847492cba3468f9ae903378cc02, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal.003
-    second: {fileID: 2100000, guid: 6adcb2cbe7a6aa544bee1ffe1654f02a, type: 2}
+      name: Toy extra
+    second: {fileID: 2100000, guid: af879d8e8520e6c42acc2567c6c01724, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Orange
-    second: {fileID: 2100000, guid: 9bdeaaa40590c1d40943694e5dded299, type: 2}
+      name: Vase
+    second: {fileID: 2100000, guid: ceb11605167c7c14e8a1cc11cd848a9c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Pic
-    second: {fileID: 2100000, guid: 23a63d5a461a40c4e941020e4537365d, type: 2}
+      name: Walls 1
+    second: {fileID: 2100000, guid: 8d67bde566dab424d982e695e4b7c958, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plastic.007
-    second: {fileID: 2100000, guid: f907c2b22a4d97942944d462d58027c3, type: 2}
+      name: Walls 2
+    second: {fileID: 2100000, guid: 64f3514398cd7ec478a9e52b91817cec, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Shade.001
-    second: {fileID: 2100000, guid: 5ae9ebb00d509c44c9bce68b14b031cf, type: 2}
+      name: Walls 3
+    second: {fileID: 2100000, guid: cdbf25d425539c54ca10847968a0817c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Washpoint Painted Wood White
-    second: {fileID: 2100000, guid: 1ded83c6bc09b784188bde0b5dd126ca, type: 2}
+      name: Walls_
+    second: {fileID: 2100000, guid: c4078d9e3d46f5546b8491b6cd1c5b59, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: White.003
-    second: {fileID: 2100000, guid: 55a3617edbe848845acd82bcbe77d4bb, type: 2}
+      name: Wood
+    second: {fileID: 2100000, guid: 90b72e50ffa9dd2479454d454e82387d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wood Bright
-    second: {fileID: 2100000, guid: 859dc4d1b08f3f048847dbf53724b1aa, type: 2}
+      name: Wood 2
+    second: {fileID: 2100000, guid: 8cbf56b6c546a7247b1849111dc936f3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wood Natural
-    second: {fileID: 2100000, guid: 11d2051be5aedd8409bba62fabf3fa33, type: 2}
+      name: Wood 3
+    second: {fileID: 2100000, guid: 1be968fea53800c4a9f0989e83e73c96, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: beech
-    second: {fileID: 2100000, guid: 2d56b04939bed584c82b5f4a4d10bd29, type: 2}
+      name: glas.001
+    second: {fileID: 2100000, guid: 00220220709c9dd449a36656c5b4e005, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: beech.001
-    second: {fileID: 2100000, guid: 36c5d6cbdc5bdb1499ca18ba3f931abf, type: 2}
+      name: nos.001
+    second: {fileID: 2100000, guid: 82e657fe0a892494fbede9468f717bf7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: beech_cross
-    second: {fileID: 2100000, guid: cc7e1c08f19ac124d8eada6baae97f82, type: 2}
+      name: nos_bel.001
+    second: {fileID: 2100000, guid: 201ffc39703b0554dad6dcf16205f085, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: legs
-    second: {fileID: 2100000, guid: b7ec85d50d3a86649b802233388a29d5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: rubber
-    second: {fileID: 2100000, guid: 30decaa17ee45cc479cfffc947a93918, type: 2}
+      name: slide
+    second: {fileID: 2100000, guid: 227924ca4e804484e9110d572bebfe3a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: slide game 01 blue
-    second: {fileID: 2100000, guid: 54ff0b3e7d02d614fa7cf34dd8b0bb18, type: 2}
+    second: {fileID: 2100000, guid: 80007f392ac30764db8f2b647a336314, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: slide game 01 hard blue
-    second: {fileID: 2100000, guid: ef61473e52e6b3243ab40eb9a33a2030, type: 2}
+    second: {fileID: 2100000, guid: e2c79015b24202646adcd56e2c17ad7e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: slide game 01 red
-    second: {fileID: 2100000, guid: 70676336dffde7e4283d8a8bf93496f8, type: 2}
+    second: {fileID: 2100000, guid: 961f17ab9c8349340a3f8ea285b70b37, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: slide game 01 wood01
-    second: {fileID: 2100000, guid: 84f2079877a7f394799d326f85b4a28d, type: 2}
+    second: {fileID: 2100000, guid: 4f26324fdd509ff4a88d0e7ef12482c7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: slide game 01 wood02
-    second: {fileID: 2100000, guid: 617b3374157a3424d868058466e61fee, type: 2}
+    second: {fileID: 2100000, guid: bf7281e56aad2b1489b58b773611b604, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: slide game 01 yellow
-    second: {fileID: 2100000, guid: 9732a910a021c7646abd77d40438fca7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: slide metal
-    second: {fileID: 2100000, guid: 632de56af941ebc459c1c133f50b4cac, type: 2}
+    second: {fileID: 2100000, guid: 526e873e77bae174c8373dd315ae2b05, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -281,7 +249,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -296,11 +264,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

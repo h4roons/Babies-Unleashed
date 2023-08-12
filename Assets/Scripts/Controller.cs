@@ -1,12 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class Controller : MonoBehaviour
 {
     public LayerMask layerMask;
     [SerializeField] GameObject enemy;
     [SerializeField] NavMeshAgent player;
-    private Transform obstacle;
+    private Transform obstacletransf;
     private float ObstacleCurrentTime;
     private float obstacleReqTime;
     
@@ -14,29 +16,19 @@ public class Controller : MonoBehaviour
     void Start()
     {
         player = GetComponent<NavMeshAgent>();
+        
         player.SetDestination(enemy.transform.position);
         
     }
 
-    private void OnEnable()
-    {
-        // Messenger.AddListener(GameEvent.obstacleInstantiated,Sarch);
-         
-    }
-
-    private void OnDisable()
-    {
-        // Messenger.RemoveListener(GameEvent.obstacleInstantiated,Sarch);
-         
-    }
 
     public void Search()
     {
         Debug.Log("Search called");
 
 
-
-        if (obstacle == null)
+        Transform obstacle;
+        if (obstacletransf == null)
         {
             RaycastHit hit;
 
@@ -66,7 +58,7 @@ public class Controller : MonoBehaviour
         
        else
         {
-            float dist = Vector3.Distance(player.transform.position, obstacle.position);
+            float dist = Vector3.Distance(player.transform.position, obstacletransf.position);
 
             if (dist <= (player.stoppingDistance + 1f))
             {
@@ -80,7 +72,7 @@ public class Controller : MonoBehaviour
 
                     Debug.Log(dist);
                     Debug.Log("Obstacle Reached");
-                    obstacle.gameObject.SetActive(false);
+                    obstacletransf.gameObject.SetActive(false);
                     obstacle = null;
                     player.SetDestination(enemy.transform.position);
                     ObstacleCurrentTime = 0f;
@@ -110,18 +102,23 @@ public class Controller : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    
+    private IEnumerator OnTriggerEnter(Collider other)
     {
-        
+
         Debug.Log(other.transform.name + " LMAO");
-        if (other.transform.tag == "Distraction")
+        if (other.transform.CompareTag("Distraction"))
         {
-
-            obstacle = other.transform;
+            Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
+            obstacletransf = other.transform;
             player.SetDestination(other.transform.position);
-            Search();
-            Invoke("SetObstacleNull",10f);
-
+            if (obstacle!=null)
+            {
+                yield return new WaitForSeconds(obstacle.obstacleTime);
+                Search();
+                SetObstacleNull();
+            }
+            
         }
         else {
             Debug.Log("Game Finished");
@@ -131,7 +128,7 @@ public class Controller : MonoBehaviour
     void SetObstacleNull()
     {
        
-        Destroy(obstacle.gameObject);
+        Destroy(obstacletransf.gameObject);
         player.SetDestination(enemy.transform.position);
 
     }
