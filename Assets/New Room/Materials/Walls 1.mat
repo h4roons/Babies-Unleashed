@@ -75,10 +75,10 @@ Material:
     - _Lumin: 0
     - _MaxLight: 1
     - _Metallic: 0
-    - _MinLight: 0.778
+    - _MinLight: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 0
+    - _Offset: 1.05
     - _OtlWidth: 0.37
     - _Parallax: 0.02
     - _ReadMask: 255
@@ -96,13 +96,13 @@ Material:
     - _StencilOp: 0
     - _StencilZFail: 0
     - _Steps: 1
-    - _StpSmooth: 0
+    - _StpSmooth: 1
     - _UVSec: 0
     - _WriteMask: 255
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.77733916, b: 0.56981134, a: 1}
+    - _Color: {r: 0.7411765, g: 0.87843144, b: 0.9960785, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OtlColor: {r: 0.87960273, g: 0.9245283, b: 0.68380207, a: 1}
     - _ShnColor: {r: 1, g: 0.9807159, b: 0, a: 1}

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
@@ -77,6 +78,7 @@ public class Controller : MonoBehaviour
                     player.SetDestination(enemy.transform.position);
                     ObstacleCurrentTime = 0f;
                     obstacleReqTime = 0f;
+                    
                    
                 }
 
@@ -121,6 +123,8 @@ public class Controller : MonoBehaviour
             
         }
         else {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
             Debug.Log("Game Finished");
         }
     }
