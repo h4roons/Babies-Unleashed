@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 public class TouchManager : MonoBehaviour
 {
     public GameObject obstacle;
-    public float nextObstacle;
-    public float spawnRate;
 
 
     private Vector3 GetWorldTouchPosition(Vector2 touchPos)
@@ -29,13 +27,10 @@ public class TouchManager : MonoBehaviour
             Debug.Log("World Touch Position: " + worldTouchPosition);
             if (touchPosition != null)
             {
-                if(Time.time>nextObstacle)
-                {
-                    nextObstacle= Time.time+ spawnRate;
-                    Debug.Log(nextObstacle);
+                    
                     Instantiate(obstacle, worldTouchPosition, Quaternion.identity);
                     // Messenger.Broadcast(GameEvent.obstacleInstantiated);
-                    Debug.Log("Instantiated" + transform.name);}
+                    Debug.Log("Instantiated" + transform.name);
                 
             }
         }
