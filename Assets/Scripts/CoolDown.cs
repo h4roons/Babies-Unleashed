@@ -9,14 +9,17 @@ using TMPro;
 public class CoolDown : MonoBehaviour
 {
 
-    [SerializeField] float timer=5;
+    [SerializeField] float timer;
     public Button btn;
     bool isPressed = false;
     public TMP_Text btn_text;
+    string original_text;
+    float original_timer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        original_text = btn_text.text;
+        original_timer = timer; 
     }
 
     // Update is called once per frame
@@ -31,10 +34,10 @@ public class CoolDown : MonoBehaviour
                 btn_text.text = timer.ToString("F0");
             }
             else {
-                timer = 5;
+                timer = original_timer;
                 isPressed = false;
                 btn.interactable = true;
-                btn_text.text = "Football";
+                btn_text.text = original_text;
             }
         }
     }

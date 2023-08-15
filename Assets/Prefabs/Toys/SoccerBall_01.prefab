@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ac01f8e03cd4d84807e8cfe4c1caa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTime: 6
+  obstacleTime: 4
 --- !u!208 &4579926122775016663
 NavMeshObstacle:
   m_ObjectHideFlags: 0
