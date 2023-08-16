@@ -123,9 +123,7 @@ public class Controller : MonoBehaviour
             
         }
         else {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
-            Debug.Log("Game Finished");
+          
         }
     }
     
