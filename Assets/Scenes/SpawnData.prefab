@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 5141657918211217714}
   - component: {fileID: 6737062127080963226}
   m_Layer: 0
-  m_Name: BatManager
+  m_Name: RobotManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7785273853981130195}
   - component: {fileID: 1605104697574941070}
   m_Layer: 0
-  m_Name: BatSpawner
+  m_Name: RobotSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,4 +214,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32349fa8042d654fa077d371040da20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 6708918193522096480, guid: bafd4e4ff8d0df045b2ad0017fd0be7d, type: 3}
+  obstacle: {fileID: 6970577625302022911, guid: dee71a5f4447f0f41acc2e49137b90f9, type: 3}

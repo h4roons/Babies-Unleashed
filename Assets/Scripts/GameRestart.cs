@@ -23,7 +23,6 @@ public class GameRestart : MonoBehaviour
         if(other.GetType() == typeof(BoxCollider)) { 
             if (other.CompareTag("Player"))
             {
-            
                 int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene(currentSceneIndex);
             }

@@ -551,7 +551,7 @@ RectTransform:
   - {fileID: 1524170414479886415}
   - {fileID: 1699007266688199550}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2913,7 +2913,7 @@ GameObject:
   - component: {fileID: 5245452095141480306}
   - component: {fileID: 1079600291591794850}
   m_Layer: 5
-  m_Name: 'BatButton '
+  m_Name: 'RobotButton '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3046,7 +3046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89671b23b71e745c88d6c89038d7edf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 3
+  btn1: {fileID: 0}
+  timer: 5
   btn: {fileID: 5245452095141480306}
   btn_text: {fileID: 1150413844857436666}
 --- !u!1 &5738716636116276016
@@ -3997,7 +3998,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bat
+  m_text: Robot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4823,6 +4824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89671b23b71e745c88d6c89038d7edf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btn1: {fileID: 0}
   timer: 7
   btn: {fileID: 6324155120469266111}
   btn_text: {fileID: 7393248607960371591}
