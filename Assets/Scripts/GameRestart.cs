@@ -20,11 +20,13 @@ public class GameRestart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
+        if(other.GetType() == typeof(BoxCollider)) { 
+            if (other.CompareTag("Player"))
+            {
             
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
+                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(currentSceneIndex);
+            }
         }
     }
 }

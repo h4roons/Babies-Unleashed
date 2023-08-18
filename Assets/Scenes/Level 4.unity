@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.47703826, g: 0.79905605, b: 0.8984321, a: 1}
+  m_IndirectSpecularColor: {r: 0.47698998, g: 0.7990158, b: 0.89821696, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -963,6 +963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baby 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1414740736055027262, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1795242559814368388, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1044,6 +1048,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1414740736055027262, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2000660466}
+    - targetCorrespondingSourceObject: {fileID: 1414740736055027262, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2000660473}
   m_SourcePrefab: {fileID: 100100000, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
 --- !u!1 &265780774
 GameObject:
@@ -3903,6 +3910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baby 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8613535764564142428, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8989956200821404646, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3972,12 +3983,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8613535764564142428, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
       insertIndex: -1
       addedObject: {fileID: 445985743}
+    - targetCorrespondingSourceObject: {fileID: 8613535764564142428, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1348819833}
   m_SourcePrefab: {fileID: 100100000, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
 --- !u!4 &1348819832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8989956200821404646, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
   m_PrefabInstance: {fileID: 1348819831}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1348819833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445985742}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999999, y: 2.4899542, z: 0.9999999}
+  m_Center: {x: -0, y: 0.74497694, z: 0}
 --- !u!1 &1375941800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6169,6 +6204,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1795242559814368388, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
   m_PrefabInstance: {fileID: 253151144}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2000660473
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000660465}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999999, y: 2.4899542, z: 0.9999999}
+  m_Center: {x: -0, y: 0.74497694, z: 0}
 --- !u!1 &2037137377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6605,6 +6661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baby 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4113812432180270216, guid: 873dff323643149548e3fd24dd491169, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7097678574178075282, guid: 873dff323643149548e3fd24dd491169, type: 3}
       propertyPath: enemy
       value: 
@@ -6615,13 +6675,42 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2906907818571045063, guid: 873dff323643149548e3fd24dd491169, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1849865478}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4113812432180270216, guid: 873dff323643149548e3fd24dd491169, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1512690407915550985}
   m_SourcePrefab: {fileID: 100100000, guid: 873dff323643149548e3fd24dd491169, type: 3}
 --- !u!4 &1512690407915550983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2906907818571045063, guid: 873dff323643149548e3fd24dd491169, type: 3}
   m_PrefabInstance: {fileID: 1512690407915550982}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1512690407915550984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4113812432180270216, guid: 873dff323643149548e3fd24dd491169, type: 3}
+  m_PrefabInstance: {fileID: 1512690407915550982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1512690407915550985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512690407915550984}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999999, y: 2.4899542, z: 0.9999999}
+  m_Center: {x: -0, y: 0.74497694, z: 0}
 --- !u!4 &5721131095522049500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5945601285310072739, guid: addba9787351c4508b11d22521dcc848, type: 3}
