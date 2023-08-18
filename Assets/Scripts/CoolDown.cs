@@ -6,9 +6,11 @@ using TMPro;
 
 
 
+
 public class CoolDown : MonoBehaviour
 {
 
+    public Button btn1;
     [SerializeField] float timer;
     public Button btn;
     bool isPressed = false;

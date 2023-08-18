@@ -963,6 +963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baby 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1414740736055027262, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1795242559814368388, guid: 043158c709474b944a2d3015bed0dc6a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3407,6 +3411,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135097406}
   m_CullTransparentMesh: 0
+--- !u!1001 &1153547975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348819832}
+    m_Modifications:
+    - target: {fileID: 1404734935338200, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_Name
+      value: FX_Direction_Arrows_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.59460104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.594601
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.59460104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.073
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2106076
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.99999505
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0031557682
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199079739478439532, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+--- !u!4 &1153547976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4118970330137676, guid: 162d349d1974cff47b0c8fb20111891b, type: 3}
+  m_PrefabInstance: {fileID: 1153547975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1172802416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3903,6 +3989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baby 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8613535764564142428, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8989956200821404646, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3949,7 +4039,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8989956200821404646, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1153547976}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8613535764564142428, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
       insertIndex: -1
@@ -3970,6 +4063,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 445985743}
   m_SourcePrefab: {fileID: 100100000, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
+--- !u!4 &1348819832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8989956200821404646, guid: 48f79d00c723f5d4aac4df2be5236351, type: 3}
+  m_PrefabInstance: {fileID: 1348819831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1375941800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5152,6 +5250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89671b23b71e745c88d6c89038d7edf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btn1: {fileID: 0}
   timer: 5
   btn: {fileID: 1732907541}
   btn_text: {fileID: 1601726764}
@@ -6178,6 +6277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89671b23b71e745c88d6c89038d7edf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btn1: {fileID: 0}
   timer: 3
   btn: {fileID: 2112895292}
   btn_text: {fileID: 26927306}
