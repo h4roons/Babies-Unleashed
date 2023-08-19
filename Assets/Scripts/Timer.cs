@@ -8,9 +8,18 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] float timer;
     public TMP_Text timerText;
+
+    public Canvas WinScreen;
+
+    public Canvas GameUII;
+
+    public AudioSource bgm;
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
+        bgm.gameObject.SetActive(true);
+        GameUII.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -22,19 +31,14 @@ public class Timer : MonoBehaviour
             
             timerText.text = timer.ToString("F0");
         }
-        else {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            int nextSceneIndex = currentSceneIndex + 1;
-
-            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-            {
-                SceneManager.LoadScene(nextSceneIndex);
-            }
-            else
-            {
-                // No more levels, you could implement some end game logic here
-                Debug.Log("No more levels to load.");
-            }
+        else
+        {
+            bgm.gameObject.SetActive(false);
+            
+            GameUII.gameObject.SetActive(false);
+            Time.timeScale = 0f;
+            WinScreen.gameObject.SetActive(true);
+            
             Debug.Log("Timer Completed");
         }
     }
