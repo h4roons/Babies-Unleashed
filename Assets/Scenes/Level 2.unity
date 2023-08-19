@@ -488,8 +488,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 3.8553696}
-  m_Center: {x: 0, y: 0, z: 0.9276848}
+  m_Size: {x: 2, y: 2, z: 2.3800583}
+  m_Center: {x: 0, y: 0, z: 0.19002914}
 --- !u!23 &531894048
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -548,7 +548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531894046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.619958, y: 0.4, z: -68.27}
+  m_LocalPosition: {x: 2.619958, y: 0.4, z: -67.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1049,6 +1049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Canvas '
       objectReference: {fileID: 0}
+    - target: {fileID: 3909583474449496664, guid: 166f678c127134ec0996e005b00a5b7b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a5734963acd3364c86243a75d928df7, type: 3}
     - target: {fileID: 5245452095141480306, guid: 166f678c127134ec0996e005b00a5b7b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1157,6 +1161,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8437287846751594080, guid: 166f678c127134ec0996e005b00a5b7b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a5734963acd3364c86243a75d928df7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
