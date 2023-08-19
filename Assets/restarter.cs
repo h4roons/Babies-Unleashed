@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TakeMeHome : MonoBehaviour
+public class restarter : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,9 +17,9 @@ public class TakeMeHome : MonoBehaviour
         
     }
 
-    public void HomeButton()
+    public void Restarter()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
