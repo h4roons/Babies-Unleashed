@@ -5,12 +5,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5644e60bd9bf49741a77c2796b6c6dc2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5644e60bd9bf49741a77c2796b6c6dc2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -81,42 +80,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: cf858b2e7f46cb74bafbdc0e68a79347, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5644e60bd9bf49741a77c2796b6c6dc2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4999788720537370790}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5644e60bd9bf49741a77c2796b6c6dc2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2003299918019686754}
   m_SourcePrefab: {fileID: 100100000, guid: 5644e60bd9bf49741a77c2796b6c6dc2, type: 3}
 --- !u!1 &3979893173453555477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5644e60bd9bf49741a77c2796b6c6dc2, type: 3}
   m_PrefabInstance: {fileID: 4321769063844854340}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &4999788720537370790
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3979893173453555477}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.014513388, y: 0.020339586, z: 0.020205114}
-  m_Center: {x: -0.0016996175, y: 0.00081367133, z: -0.0065217186}
 --- !u!114 &2003299918019686754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecb179b5dff84db7947417cee099ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameUii: {fileID: 0}
+  LoseScreen: {fileID: 0}
+  bgm: {fileID: 0}

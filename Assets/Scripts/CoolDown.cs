@@ -18,6 +18,7 @@ public class CoolDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         original_text = btn_text.text;
         original_timer = timer; 
     }

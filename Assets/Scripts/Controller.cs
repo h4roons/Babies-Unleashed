@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour
 {
     public LayerMask layerMask;
     [SerializeField] GameObject enemy;
-    [SerializeField] NavMeshAgent player;
+    NavMeshAgent player;
     private Transform obstacletransf;
     private float ObstacleCurrentTime;
     private float obstacleReqTime;
