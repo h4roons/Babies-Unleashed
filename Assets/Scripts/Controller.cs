@@ -2,29 +2,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+
 using UnityEngine.SceneManagement;
+using System;
+using Unity.VisualScripting;
 
 public class Controller : MonoBehaviour
 {
     public LayerMask layerMask;
-    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject danger;
     NavMeshAgent player;
     private Transform obstacletransf;
     private float ObstacleCurrentTime;
     private float obstacleReqTime;
-    
+
     // Start is called before the first frame update
-    void Start()
+    public void Run()
     {
         player = GetComponent<NavMeshAgent>();
-        
-        player.SetDestination(enemy.transform.position);
-        
+
+        player.SetDestination(danger.transform.position);
+        GetComponent<Animator>().SetTrigger("Run");
+
+
+
     }
 
 
     public void Search()
     {
+
         Debug.Log("Search called");
 
 
@@ -35,7 +42,7 @@ public class Controller : MonoBehaviour
 
 
             float distanceToObstacle = 0;
-        
+
             if (Physics.SphereCast(transform.position, 0.5f, transform.forward, out hit, 10, layerMask))
             {
                 distanceToObstacle = hit.distance;
@@ -51,13 +58,13 @@ public class Controller : MonoBehaviour
         // Cast a sphere wrapping character controller 10 meters forward
 
         // to see if it is about to hit anything.
-        
-        
 
-            
 
-        
-       else
+
+
+
+
+        else
         {
             float dist = Vector3.Distance(player.transform.position, obstacletransf.position);
 
@@ -75,36 +82,127 @@ public class Controller : MonoBehaviour
                     Debug.Log("Obstacle Reached");
                     obstacletransf.gameObject.SetActive(false);
                     obstacle = null;
-                    player.SetDestination(enemy.transform.position);
+                    player.SetDestination(danger.transform.position);
                     ObstacleCurrentTime = 0f;
                     obstacleReqTime = 0f;
-                    
-                   
+
+
                 }
 
             }
         }
 
     }
-   
+
     // private void OnDrawGizmos()
     // {
     //     Gizmos.color=Color.red;
     //     Gizmos.DrawSphere(transform.position,0.5f);
     // }
-
-    void Sarch()
+    public SpriteRenderer[] thought;
+    Color thoughtColor;
+    bool thoughtOut = false;
+    bool thoughtIn = false;
+    LineRenderer lineRenderer;
+    float t = 0f;
+    Vector3 targetPos;
+    private void Start()
     {
+        StartCoroutine(Restless());
+        lineRenderer = GetComponent<LineRenderer>();
+        targetPos = danger.transform.position;
+    }
+
+    void Update()
+    {
+
+        //Line Renderer Stuff
+        lineRenderer.positionCount = 2;
+
+        t += Time.deltaTime / 2;
+        t = Mathf.Clamp01(t);
+        Vector3 target = Vector3.Lerp(transform.position, targetPos, t);
         
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, target);
+
+        if (thoughtIn)
+        {
+            for (int i = 0; i < thought.Length; i++)
+            {
+                // Get the current color of the sprite
+                Color currentColor = thought[i].color;
+
+                if (currentColor.a < 1)
+                {
+                    // Set the new alpha value
+                    Color newColor = new Color(currentColor.r, currentColor.g, currentColor.b, currentColor.a += Time.deltaTime / .6f);
+
+                    // Assign the new color with modified alpha back to the sprite renderer
+                    thought[i].color = newColor;
+
+                    if (thoughtColor.a >= 1)
+                    {
+                        thoughtIn = false;
+                    }
+                }
+            }
+
+        }
+
+        if (thoughtOut)
+        {
+            for (int i = 0; i < thought.Length; i++)
+            {
+                // Get the current color of the sprite
+                Color currentColor = thought[i].color;
+
+                if (currentColor.a > 0)
+                {
+                    // Set the new alpha value
+                    Color newColor = new Color(currentColor.r, currentColor.g, currentColor.b, currentColor.a -= Time.deltaTime / .6f);
+
+                    // Assign the new color with modified alpha back to the sprite renderer
+                    thought[i].color = newColor;
+
+                    if (thoughtColor.a <= 0)
+                    {
+                        thoughtIn = false;
+                    }
+                }
+            }
+
+        }
+
+        // 
+        // newAlpha.a = 1;
+        // thought.color = Color.Lerp(thought.color, newAlpha, .02f);
+        //    while(newAlpha.a != 1)
+        //    {
+
+        //    }
+
 
         // Update is called once per frame
-        
+
 
 
 
     }
+    IEnumerator Restless()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(1, 10));
+        // Debug.Log("ji");
+        GetComponent<Animator>().SetTrigger("Kera");
+        yield return new WaitForSeconds(.7f);
 
-    
+        
+        lineRenderer.enabled = true;
+
+        thoughtIn = true;
+        yield return new WaitForSeconds(2);
+        thoughtOut = true;
+    }
     private IEnumerator OnTriggerEnter(Collider other)
     {
 
@@ -114,29 +212,26 @@ public class Controller : MonoBehaviour
             Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
             obstacletransf = other.transform;
             player.SetDestination(other.transform.position);
-            if (obstacle!=null)
+            if (obstacle != null)
             {
                 yield return new WaitForSeconds(obstacle.obstacleTime);
                 Search();
                 SetObstacleNull();
             }
-            
+
         }
-        else {
-          
+        else
+        {
+
         }
     }
-    
+
     void SetObstacleNull()
     {
-       
+
         Destroy(obstacletransf.gameObject);
-        player.SetDestination(enemy.transform.position);
+        player.SetDestination(danger.transform.position);
 
     }
-    void Update()
-    {
-       
 
-    }
 }

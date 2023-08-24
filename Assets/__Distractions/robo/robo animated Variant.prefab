@@ -5,7 +5,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
@@ -14,27 +13,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.363
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.363
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.363
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1307068
+      value: 5.749563
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06613183
+      value: -0.6467552
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -53.87
+      value: 15.39956
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -77,18 +76,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 83ed6e69cc5501347b492494405c294e, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8152738534817770312}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7038213512538939807}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5030590782350060274}
   m_SourcePrefab: {fileID: 100100000, guid: 55ac74bafed741b4b8cc7298239d51a8, type: 3}
 --- !u!1 &6970577625302022911 stripped
 GameObject:
@@ -103,19 +90,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6970577625302022911}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 3.618818, z: 1}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1.8271023, z: 0}
+--- !u!208 &5030590782350060274
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970577625302022911}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &7038213512538939807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,19 +124,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleTime: 5
---- !u!208 &5030590782350060274
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6970577625302022911}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5

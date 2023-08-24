@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3317477687133958909
 MonoBehaviour:
@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd8e900a88098479776b4c35a7ce5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 15
+  timer: 60
   timerText: {fileID: 0}
+  WinScreen: {fileID: 0}
+  GameUII: {fileID: 0}
+  bgm: {fileID: 0}
