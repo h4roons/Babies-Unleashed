@@ -15,7 +15,7 @@ public class Controller : MonoBehaviour
     private Transform obstacletransf;
     private float ObstacleCurrentTime;
     private float obstacleReqTime;
-
+    bool babyLocked=false;
     // Start is called before the first frame update
     public void Run()
     {
@@ -28,7 +28,16 @@ public class Controller : MonoBehaviour
 
     }
 
+    public void SetObstacleNull()
+    {
+        Debug.Log("Set Obstacle Null");
+        Search();
+        GetComponent<Animator>().SetBool("isPlaying", false);
+        babyLocked = false;
+        Destroy(obstacletransf.gameObject);
+        player.SetDestination(danger.transform.position);
 
+    }
     public void Search()
     {
 
@@ -203,22 +212,26 @@ public class Controller : MonoBehaviour
         yield return new WaitForSeconds(2);
         thoughtOut = true;
     }
-    private IEnumerator OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
 
         Debug.Log(other.transform.name + " LMAO");
-        if (other.transform.CompareTag("Distraction"))
+        if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked==false && babyLocked==false && GetComponent<Animator>().GetBool("isPlaying")==false)
         {
             Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
             obstacletransf = other.transform;
+            babyLocked = true;
+            other.GetComponent<Obstacle>().locked =true;
             player.SetDestination(other.transform.position);
+           
             if (obstacle != null)
             {
-                yield return new WaitForSeconds(obstacle.obstacleTime);
-                Search();
-                SetObstacleNull();
+                GetComponent<Animator>().SetBool("isPlaying", true);
+                //yield return new WaitForSeconds(obstacle.obstacleTime);
+                //Search();
+                //SetObstacleNull();
             }
-
+            
         }
         else
         {
@@ -226,12 +239,6 @@ public class Controller : MonoBehaviour
         }
     }
 
-    void SetObstacleNull()
-    {
 
-        Destroy(obstacletransf.gameObject);
-        player.SetDestination(danger.transform.position);
-
-    }
 
 }
