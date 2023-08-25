@@ -18,11 +18,15 @@ public class CoolDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         original_text = btn_text.text;
-        original_timer = timer; 
-    }
+        original_timer = timer;
+        btn.interactable = false;
 
+    }
+    public void setButtonActive()
+    {
+        btn.interactable = true;    
+    }
     // Update is called once per frame
     void Update()
     {

@@ -20,19 +20,18 @@ public class Controller : MonoBehaviour
     public void Run()
     {
         player = GetComponent<NavMeshAgent>();
-
         player.SetDestination(danger.transform.position);
         GetComponent<Animator>().SetTrigger("Run");
-
-
-
+        CoolDown[] foundobj=  FindObjectsOfType<CoolDown>();
+        foreach (CoolDown obj in foundobj)
+        {
+            obj.setButtonActive();
+        }
     }
 
     public void SetObstacleNull()
     {
         Debug.Log("Set Obstacle Null");
-        Search();
-        GetComponent<Animator>().SetBool("isPlaying", false);
         babyLocked = false;
         Destroy(obstacletransf.gameObject);
         player.SetDestination(danger.transform.position);
@@ -212,11 +211,11 @@ public class Controller : MonoBehaviour
         yield return new WaitForSeconds(2);
         thoughtOut = true;
     }
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
 
         Debug.Log(other.transform.name + " LMAO");
-        if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked==false && babyLocked==false && GetComponent<Animator>().GetBool("isPlaying")==false)
+        if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked==false && babyLocked==false)
         {
             Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
             obstacletransf = other.transform;
@@ -226,17 +225,15 @@ public class Controller : MonoBehaviour
            
             if (obstacle != null)
             {
-                GetComponent<Animator>().SetBool("isPlaying", true);
-                //yield return new WaitForSeconds(obstacle.obstacleTime);
-                //Search();
-                //SetObstacleNull();
+                GetComponent<Animator>().SetTrigger("Playing");
+                yield return new WaitForSeconds(obstacle.obstacleTime);
+                Search();
+                SetObstacleNull();
+                GetComponent<Animator>().SetTrigger("Run");
             }
             
         }
-        else
-        {
-
-        }
+        
     }
 
 
