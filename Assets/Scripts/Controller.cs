@@ -22,6 +22,7 @@ public class Controller : MonoBehaviour
         player = GetComponent<NavMeshAgent>();
         player.SetDestination(danger.transform.position);
         GetComponent<Animator>().SetTrigger("Run");
+        FindAnyObjectByType<Timer>().beginTimer();
         CoolDown[] foundobj=  FindObjectsOfType<CoolDown>();
         foreach (CoolDown obj in foundobj)
         {

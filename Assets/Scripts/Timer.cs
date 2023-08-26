@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float timer;
+    [SerializeField] float timer=1f;
+
+    bool startTimer=false;
+
     public TMP_Text timerText;
 
     public Canvas WinScreen;
@@ -25,11 +28,15 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
+        if (timer > 0 && startTimer)
         {
             timer -= Time.deltaTime;
             
             timerText.text = timer.ToString("F0");
+        }
+        else if (!startTimer)
+        {
+            Debug.Log("Rest State");
         }
         else
         {
@@ -41,5 +48,8 @@ public class Timer : MonoBehaviour
             
             Debug.Log("Timer Completed");
         }
+    }
+    public void beginTimer() { 
+        startTimer = true;  
     }
 }
