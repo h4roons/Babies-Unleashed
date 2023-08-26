@@ -1227,6 +1227,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 413058, guid: ae7b8255185ace64ca379cb1ca3b24e6, type: 3}
   m_PrefabInstance: {fileID: 117661273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &124092876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124092877}
+  m_Layer: 0
+  m_Name: ToyPicker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124092877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124092876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1638690439}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &128447495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9475,6 +9506,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 413058, guid: ae7b8255185ace64ca379cb1ca3b24e6, type: 3}
   m_PrefabInstance: {fileID: 1634628024}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1638690439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8167766633753489883, guid: aa1ea7691a69542d882e26cd256840f4, type: 3}
+  m_PrefabInstance: {fileID: 14910075826307427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1656726359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14094,9 +14130,16 @@ PrefabInstance:
       propertyPath: danger
       value: 
       objectReference: {fileID: 1288031523}
+    - target: {fileID: 7332330013257863858, guid: aa1ea7691a69542d882e26cd256840f4, type: 3}
+      propertyPath: lefthand
+      value: 
+      objectReference: {fileID: 124092877}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8167766633753489883, guid: aa1ea7691a69542d882e26cd256840f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 124092877}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1ea7691a69542d882e26cd256840f4, type: 3}
 --- !u!224 &62566360244818053

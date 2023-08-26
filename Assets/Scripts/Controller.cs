@@ -6,6 +6,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System;
 using Unity.VisualScripting;
+using DG.Tweening;
 
 public class Controller : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Controller : MonoBehaviour
     private float obstacleReqTime;
     bool babyLocked=false;
     bool isStartAnimation;
+    [SerializeField] Transform lefthand;
+    GameObject toy;
     // Start is called before the first frame update
     public void Run()
     {
@@ -223,6 +226,7 @@ public class Controller : MonoBehaviour
         if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked==false && babyLocked==false )
         {
             Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
+            toy = other.gameObject;
             obstacletransf = other.transform;
             babyLocked = true;
             other.GetComponent<Obstacle>().locked =true;
@@ -230,6 +234,8 @@ public class Controller : MonoBehaviour
             if (obstacle != null)
             {
                 isStartAnimation = true;
+
+                
                 yield return new WaitForSeconds(obstacle.obstacleTime);
                 Search();
                 SetObstacleNull();
@@ -240,7 +246,6 @@ public class Controller : MonoBehaviour
         }
         
     }
-   
     void startAnimation()
     {
         float distance = Vector3.Distance(player.transform.position, player.destination);
@@ -248,6 +253,10 @@ public class Controller : MonoBehaviour
 
         if (distance <= 1f) {
             GetComponent<Animator>().SetTrigger("Playing");
+            player.SetDestination(player.transform.position);
+            toy.transform.SetParent(lefthand);
+            toy.transform.localPosition = new Vector3(0, 0, 0);
+
             isStartAnimation = false;
         }
     }
