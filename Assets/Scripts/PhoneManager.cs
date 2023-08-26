@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RubixManager : MonoBehaviour
+public class PhoneManager : MonoBehaviour
 {
     [SerializeField] GameObject touchManager;
     
