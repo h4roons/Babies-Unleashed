@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721904957171652524}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1281596088074819361
 MeshFilter:
@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 1721904957171652524}
   - component: {fileID: 3177733372244285557}
   - component: {fileID: 8001464643388853736}
-  - component: {fileID: 8865107647492081723}
   - component: {fileID: 723853579915463312}
   - component: {fileID: 9074570043630670197}
   m_Layer: 0
@@ -118,7 +117,7 @@ Transform:
   m_Children:
   - {fileID: 5207540173725645952}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &3177733372244285557
 MeshFilter:
@@ -170,22 +169,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!208 &8865107647492081723
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8429772798768339400}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.011000001, y: 0.007, z: 0.035}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.006, z: -0.032}
-  m_TimeToStationary: 0.5
 --- !u!65 &723853579915463312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -194,19 +177,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8429772798768339400}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.022, y: 0.013385869, z: 0.06949986}
-  m_Center: {x: 2.9646215e-15, y: 0.0063936315, z: -0.032151062}
+  serializedVersion: 2
+  m_Size: {x: 0.022000002, y: 0.01338587, z: 0.069499865}
+  m_Center: {x: 0, y: 0.006393632, z: -0.032150947}
 --- !u!114 &9074570043630670197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,5 +194,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ac01f8e03cd4d84807e8cfe4c1caa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTime: 10
+  obstacleTime: 15
   locked: 0

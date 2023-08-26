@@ -2,12 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
-
-using UnityEngine.SceneManagement;
-using System;
-using Unity.VisualScripting;
-using DG.Tweening;
-
+using DamageNumbersPro;
 public class Controller : MonoBehaviour
 {
     public LayerMask layerMask;
@@ -16,9 +11,10 @@ public class Controller : MonoBehaviour
     private Transform obstacletransf;
     private float ObstacleCurrentTime;
     private float obstacleReqTime;
-    bool babyLocked=false;
+    bool babyLocked = false;
     bool isStartAnimation;
     [SerializeField] Transform lefthand;
+    [SerializeField] DamageNumber numberPrefab;
     GameObject toy;
     // Start is called before the first frame update
     public void Run()
@@ -26,8 +22,8 @@ public class Controller : MonoBehaviour
         player = GetComponent<NavMeshAgent>();
         player.SetDestination(danger.transform.position);
         GetComponent<Animator>().SetTrigger("Run");
-        FindAnyObjectByType<Timer>().beginTimer();
-        CoolDown[] foundobj=  FindObjectsOfType<CoolDown>();
+        FindObjectOfType<Timer>().beginTimer();
+        CoolDown[] foundobj = FindObjectsOfType<CoolDown>();
         foreach (CoolDown obj in foundobj)
         {
             obj.setButtonActive();
@@ -72,12 +68,6 @@ public class Controller : MonoBehaviour
         // Cast a sphere wrapping character controller 10 meters forward
 
         // to see if it is about to hit anything.
-
-
-
-
-
-
         else
         {
             float dist = Vector3.Distance(player.transform.position, obstacletransf.position);
@@ -127,19 +117,51 @@ public class Controller : MonoBehaviour
         targetPos = danger.transform.position;
         isStartAnimation = false;
     }
+    float f = 3f;
+    bool isXPeffecting = false;
+    float timer = 1f;
 
     void Update()
     {
-        if (isStartAnimation==true) {
+        if (isXPeffecting)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0.5f)
+            {
+                numberPrefab.Spawn(transform.position + Vector3.up * 2, 2f);
+                timer = 1f;
+            }
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            
+        }
+        if (isStartAnimation == true)
+        {
             startAnimation();
         }
+
+        if (lineRenderer.enabled)
+        {
+
+            f -= Time.deltaTime;
+            if (f <= 1)
+            {
+                f = Mathf.Clamp(f, 0, 3);
+                lineRenderer.startWidth = f;
+                lineRenderer.endWidth = f;
+            }
+        }
+
         //Line Renderer Stuff
         lineRenderer.positionCount = 2;
 
         t += Time.deltaTime / 2;
         t = Mathf.Clamp01(t);
         Vector3 target = Vector3.Lerp(transform.position, targetPos, t);
-        
+
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, target);
 
@@ -213,7 +235,7 @@ public class Controller : MonoBehaviour
         GetComponent<Animator>().SetTrigger("Kera");
         yield return new WaitForSeconds(.7f);
 
-        
+
         lineRenderer.enabled = true;
 
         thoughtIn = true;
@@ -223,40 +245,44 @@ public class Controller : MonoBehaviour
     private IEnumerator OnTriggerEnter(Collider other)
     {
 
-        if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked==false && babyLocked==false )
+        if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked == false && babyLocked == false)
         {
             Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
             toy = other.gameObject;
             obstacletransf = other.transform;
             babyLocked = true;
-            other.GetComponent<Obstacle>().locked =true;
+            other.GetComponent<Obstacle>().locked = true;
             player.SetDestination(other.transform.position);
             if (obstacle != null)
             {
                 isStartAnimation = true;
-
-                
                 yield return new WaitForSeconds(obstacle.obstacleTime);
+
+                isXPeffecting = false;
                 Search();
                 SetObstacleNull();
-                
-                
             }
-            
+
         }
-        
+
     }
     void startAnimation()
     {
         float distance = Vector3.Distance(player.transform.position, player.destination);
         Debug.Log(distance);
 
-        if (distance <= 1f) {
+        if (distance <= 1f)
+        {
             GetComponent<Animator>().SetTrigger("Playing");
             player.SetDestination(player.transform.position);
             toy.transform.SetParent(lefthand);
+
+            //XP STUFF
+            isXPeffecting = true;
+
             toy.transform.localPosition = new Vector3(0, 0, 0);
 
+            // numberPrefab.Spawn(transform.position + Vector3.up * 2, 2f);
             isStartAnimation = false;
         }
     }
