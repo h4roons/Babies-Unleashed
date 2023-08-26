@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour
     private float ObstacleCurrentTime;
     private float obstacleReqTime;
     bool babyLocked=false;
+    bool isStartAnimation;
     // Start is called before the first frame update
     public void Run()
     {
@@ -34,9 +35,10 @@ public class Controller : MonoBehaviour
     {
         Debug.Log("Set Obstacle Null");
         babyLocked = false;
-        Destroy(obstacletransf.gameObject);
+        DestroyImmediate(obstacletransf.gameObject);
+        isStartAnimation = false;
+        GetComponent<Animator>().SetTrigger("Run");
         player.SetDestination(danger.transform.position);
-
     }
     public void Search()
     {
@@ -120,11 +122,14 @@ public class Controller : MonoBehaviour
         StartCoroutine(Restless());
         lineRenderer = GetComponent<LineRenderer>();
         targetPos = danger.transform.position;
+        isStartAnimation = false;
     }
 
     void Update()
     {
-
+        if (isStartAnimation==true) {
+            startAnimation();
+        }
         //Line Renderer Stuff
         lineRenderer.positionCount = 2;
 
@@ -215,28 +220,36 @@ public class Controller : MonoBehaviour
     private IEnumerator OnTriggerEnter(Collider other)
     {
 
-        Debug.Log(other.transform.name + " LMAO");
-        if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked==false && babyLocked==false)
+        if (other.transform.CompareTag("Distraction") && other.GetComponent<Obstacle>().locked==false && babyLocked==false )
         {
             Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
             obstacletransf = other.transform;
             babyLocked = true;
             other.GetComponent<Obstacle>().locked =true;
             player.SetDestination(other.transform.position);
-           
             if (obstacle != null)
             {
-                GetComponent<Animator>().SetTrigger("Playing");
+                isStartAnimation = true;
                 yield return new WaitForSeconds(obstacle.obstacleTime);
                 Search();
                 SetObstacleNull();
-                GetComponent<Animator>().SetTrigger("Run");
+                
+                
             }
             
         }
         
     }
+   
+    void startAnimation()
+    {
+        float distance = Vector3.Distance(player.transform.position, player.destination);
+        Debug.Log(distance);
 
-
+        if (distance <= 1f) {
+            GetComponent<Animator>().SetTrigger("Playing");
+            isStartAnimation = false;
+        }
+    }
 
 }
