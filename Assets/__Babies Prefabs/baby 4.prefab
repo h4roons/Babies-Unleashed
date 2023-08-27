@@ -2742,9 +2742,12 @@ MonoBehaviour:
     m_Bits: 8
   danger: {fileID: 0}
   lefthand: {fileID: 4682841180974740125}
+  numberPrefab: {fileID: 4429955404208352826, guid: b791f73611a1c7f42a7210c6526e071a, type: 3}
   thought:
   - {fileID: 6887457509831036280}
   - {fileID: 6887457511074839801}
+  startMax: 25
+  startMin: 30
 --- !u!135 &1253628783
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2756,7 +2759,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!120 &374839155
 LineRenderer:

@@ -919,6 +919,8 @@ MonoBehaviour:
   thought:
   - {fileID: 6547364691143289601}
   - {fileID: 6547364690239068800}
+  startMax: 50
+  startMin: 55
 --- !u!54 &5013422817599486126
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -959,7 +961,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!120 &1287091221
 LineRenderer:

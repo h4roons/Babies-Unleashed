@@ -121,15 +121,17 @@ public class Controller : MonoBehaviour
     float f = 3f;
     bool isXPeffecting = false;
     float timer = 1f;
+    [SerializeField] float startMax = 1;
+    [SerializeField] float startMin = 10;
 
     void Update()
     {
         if (isXPeffecting)
         {
             timer -= Time.deltaTime;
-            if (timer <= 0.5f)
+            if (timer <= 0.3f)
             {
-                numberPrefab.Spawn(transform.position + Vector3.up * 2, 2f);
+                numberPrefab.Spawn(transform.position + Vector3.up * 3.5f, 2f);
                 timer = 1f;
             }
         }
@@ -232,7 +234,7 @@ public class Controller : MonoBehaviour
     IEnumerator Restless()
     {
         
-        yield return new WaitForSeconds(UnityEngine.Random.Range(1, 10));
+        yield return new WaitForSeconds(UnityEngine.Random.Range(startMin, startMax));
         // Debug.Log("ji");
         GetComponent<Animator>().SetTrigger("Kera");
         yield return new WaitForSeconds(.7f);
