@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
+using TMPro;
 public class GameRestart : MonoBehaviour
 {
 
@@ -14,16 +10,46 @@ public class GameRestart : MonoBehaviour
     public AudioSource bgm;
 
     public AudioSource levelFailMusic;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] TMP_Text loseTimerText;
+    bool loseTimer = false;
+    [SerializeField] Animator animator;
+  
+    [SerializeField] float t;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (loseTimer)
+        {
+            loseTimerText.gameObject.SetActive(true);
+            if (t >= 0)
+            {
+                t -= Time.deltaTime * 8;
+                if (t <= 20)
+                {
+                    
+                    animator.speed = 1.5f;
+                }
+                DisplayTIime(t);
+            }
+            else
+            {
+                Restart();
+            }
+        }
+        else
+        {
+
+            // loseTimerGO.gameObject.SetActive(false);
+        }
+    }
+    void DisplayTIime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+        float min = Mathf.FloorToInt(timeToDisplay / 60);
+        float secs = Mathf.FloorToInt(timeToDisplay % 60);
+
+        loseTimerText.text = string.Format("{0:00} : {1:00} ", min, secs);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,14 +57,23 @@ public class GameRestart : MonoBehaviour
         if(other.GetType() == typeof(BoxCollider)) { 
             if (other.CompareTag("Player"))
             {
-                
-                bgm.gameObject.SetActive(false);
-                levelFailMusic.gameObject.SetActive(true);
-                GameUii.gameObject.SetActive(false);
-                Time.timeScale = 0f;
-                LoseScreen.gameObject.SetActive(true);
-                
+                loseTimer = true;
+
+               
             }
+           
         }
+    }
+    private void OnTriggerExit(Collider other) {
+        loseTimer = false;
+    }
+
+    private void Restart()
+    {
+        bgm.gameObject.SetActive(false);
+        levelFailMusic.gameObject.SetActive(true);
+        GameUii.gameObject.SetActive(false);
+        Time.timeScale = 0f;
+        LoseScreen.gameObject.SetActive(true);
     }
 }

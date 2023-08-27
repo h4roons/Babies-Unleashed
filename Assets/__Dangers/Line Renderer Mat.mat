@@ -9,8 +9,6 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Line Renderer Mat
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
   m_InvalidKeywords: []
@@ -22,7 +20,7 @@ Material:
     RenderType: TransparentCutout
   disabledShaderPasses:
   - GRABPASS
-  m_LockedProperties: 
+  - ALWAYS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -49,7 +47,7 @@ Material:
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 0db74eaedc5768049b3b62b9e6149b09, type: 3}
         m_Scale: {x: 1.2, y: 1}
-        m_Offset: {x: 0.5606582, y: 0}
+        m_Offset: {x: 0.6836133, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
