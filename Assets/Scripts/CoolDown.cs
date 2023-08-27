@@ -15,13 +15,14 @@ public class CoolDown : MonoBehaviour
     public TMP_Text btn_text;
     string original_text;
     float original_timer;
+    [SerializeField]GameObject image;
     // Start is called before the first frame update
     void Start()
     {
         original_text = btn_text.text;
         original_timer = timer;
         btn.interactable = false;
-
+        image.SetActive(true);
     }
     public void setButtonActive()
     {
@@ -34,6 +35,7 @@ public class CoolDown : MonoBehaviour
         if (isPressed) { 
             if(timer > 0)
             {
+                image.SetActive(false);
                 timer-=Time.deltaTime;
                 btn.interactable = false;
                 btn_text.text = timer.ToString("F0");
@@ -42,6 +44,7 @@ public class CoolDown : MonoBehaviour
                 timer = original_timer;
                 isPressed = false;
                 btn.interactable = true;
+                image.SetActive(true);
                 btn_text.text = original_text;
             }
         }

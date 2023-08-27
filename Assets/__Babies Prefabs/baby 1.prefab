@@ -919,8 +919,8 @@ MonoBehaviour:
   thought:
   - {fileID: 6547364691143289601}
   - {fileID: 6547364690239068800}
-  startMax: 50
-  startMin: 55
+  startMax: 8
+  startMin: 10
 --- !u!54 &5013422817599486126
 Rigidbody:
   m_ObjectHideFlags: 0
