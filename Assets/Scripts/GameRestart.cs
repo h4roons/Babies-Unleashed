@@ -12,6 +12,8 @@ public class GameRestart : MonoBehaviour
     public Canvas LoseScreen;
 
     public AudioSource bgm;
+
+    public AudioSource levelFailMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,7 @@ public class GameRestart : MonoBehaviour
             {
                 
                 bgm.gameObject.SetActive(false);
-            
+                levelFailMusic.gameObject.SetActive(true);
                 GameUii.gameObject.SetActive(false);
                 Time.timeScale = 0f;
                 LoseScreen.gameObject.SetActive(true);

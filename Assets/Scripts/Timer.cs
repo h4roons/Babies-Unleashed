@@ -17,12 +17,16 @@ public class Timer : MonoBehaviour
     public Canvas GameUII;
 
     public AudioSource bgm;
+
+    public AudioSource levelcomplete;
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1f;
         bgm.gameObject.SetActive(true);
         GameUII.gameObject.SetActive(true);
+        levelcomplete.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -40,12 +44,11 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            levelcomplete.gameObject.SetActive(true);
             bgm.gameObject.SetActive(false);
-            
             GameUII.gameObject.SetActive(false);
             Time.timeScale = 0f;
             WinScreen.gameObject.SetActive(true);
-            
             Debug.Log("Timer Completed");
         }
     }

@@ -19,6 +19,7 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
     public void Run()
     {
+        
         player = GetComponent<NavMeshAgent>();
         player.SetDestination(danger.transform.position);
         GetComponent<Animator>().SetTrigger("Run");
@@ -230,14 +231,15 @@ public class Controller : MonoBehaviour
     }
     IEnumerator Restless()
     {
+        
         yield return new WaitForSeconds(UnityEngine.Random.Range(1, 10));
         // Debug.Log("ji");
         GetComponent<Animator>().SetTrigger("Kera");
         yield return new WaitForSeconds(.7f);
-
+        
 
         lineRenderer.enabled = true;
-
+        audioManager.instance.PlaySound("Baaz");
         thoughtIn = true;
         yield return new WaitForSeconds(2);
         thoughtOut = true;
