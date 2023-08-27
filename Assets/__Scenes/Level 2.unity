@@ -5020,10 +5020,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1109308089949517115, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2086518010040271594, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -5032,17 +5028,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9201441207548858674}
-    - target: {fileID: 2888850593809435187, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: createObstactle
-      objectReference: {fileID: 0}
     - target: {fileID: 4763688217719567709, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9201441207548858675}
-    - target: {fileID: 4763688217719567709, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: createObstactle
+    - target: {fileID: 5233548715837591106, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
+      propertyPath: m_text
+      value: '
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8673128567361896466, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
       propertyPath: m_Pivot.x
@@ -5135,6 +5129,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 155222994454513831, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
   m_PrefabInstance: {fileID: 802575333}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &802575335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5233548715837591106, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
+  m_PrefabInstance: {fileID: 802575333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &807378189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,6 +6341,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 953112393, guid: 9845436b9c7e1404491fa09d4feeec95, type: 3}
+      propertyPath: t
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 953112393, guid: 9845436b9c7e1404491fa09d4feeec95, type: 3}
       propertyPath: bgm
       value: 
       objectReference: {fileID: 5081331208570555655}
@@ -6879,11 +6888,11 @@ PrefabInstance:
       objectReference: {fileID: 953112392}
     - target: {fileID: 9073409050961551117, guid: 34e2edae727184a6390d9b8a961eaff1, type: 3}
       propertyPath: startMax
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9073409050961551117, guid: 34e2edae727184a6390d9b8a961eaff1, type: 3}
       propertyPath: startMin
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e2edae727184a6390d9b8a961eaff1, type: 3}
@@ -9374,11 +9383,11 @@ PrefabInstance:
       objectReference: {fileID: 953112392}
     - target: {fileID: 7332330013257863858, guid: aa1ea7691a69542d882e26cd256840f4, type: 3}
       propertyPath: startMax
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7332330013257863858, guid: aa1ea7691a69542d882e26cd256840f4, type: 3}
       propertyPath: startMin
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1ea7691a69542d882e26cd256840f4, type: 3}
@@ -14174,7 +14183,7 @@ PrefabInstance:
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: GameUII
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 802575334}
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: WinScreen
       value: 
@@ -14182,7 +14191,7 @@ PrefabInstance:
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: timerText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 802575335}
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: levelcomplete
       value: 

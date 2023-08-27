@@ -7245,6 +7245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1109308089949517115, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2086518010040271594, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
       propertyPath: m_Name
       value: 'Canvas '
@@ -7359,6 +7363,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
+--- !u!114 &1212993767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5233548715837591106, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
+  m_PrefabInstance: {fileID: 1212993766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1224819888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8148,6 +8163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 953112393, guid: 9845436b9c7e1404491fa09d4feeec95, type: 3}
+      propertyPath: t
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 953112393, guid: 9845436b9c7e1404491fa09d4feeec95, type: 3}
       propertyPath: bgm
       value: 
@@ -14899,11 +14918,11 @@ PrefabInstance:
       objectReference: {fileID: 1288031523}
     - target: {fileID: 7400490036663379907, guid: 873dff323643149548e3fd24dd491169, type: 3}
       propertyPath: startMax
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7400490036663379907, guid: 873dff323643149548e3fd24dd491169, type: 3}
       propertyPath: startMin
-      value: 55
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7400490036663379907, guid: 873dff323643149548e3fd24dd491169, type: 3}
       propertyPath: numberPrefab
@@ -14923,9 +14942,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5081331208570555655}
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
+      propertyPath: timer
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: GameUII
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2045083173}
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: WinScreen
       value: 
@@ -14933,7 +14956,7 @@ PrefabInstance:
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: timerText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1212993767}
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: levelcomplete
       value: 

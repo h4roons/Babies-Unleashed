@@ -121,8 +121,8 @@ public class Controller : MonoBehaviour
     float f = 3f;
     bool isXPeffecting = false;
     float timer = 1f;
-    [SerializeField] float startMax = 1;
-    [SerializeField] float startMin = 10;
+    [SerializeField] float startMax = 10;
+    [SerializeField] float startMin = 1;
 
     void Update()
     {

@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 211618205959431548}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4353571477407020130
 MonoBehaviour:
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Soundlist:
   - SoundName: Baaz
-    clip: {fileID: 8300000, guid: 46dd368617597466ba93609503140e47, type: 3}
+    clip: {fileID: 8300000, guid: bd7c9b2bad237ab46be43f21988e9b07, type: 3}
     source: {fileID: 0}
   - SoundName: Level Complete
     clip: {fileID: 8300000, guid: 4be97eae095334321b75b176bdaacfdb, type: 3}
@@ -83,7 +83,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6827955823141330898}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &536841831763959927
 MonoBehaviour:
