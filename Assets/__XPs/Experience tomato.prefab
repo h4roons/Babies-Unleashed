@@ -441,6 +441,7 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1000
+  m_SortAtRoot: 0
 --- !u!114 &4429955404208352827
 MonoBehaviour:
   m_ObjectHideFlags: 0
