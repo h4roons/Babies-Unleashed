@@ -13489,6 +13489,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 767386351583216759}
+    - target: {fileID: 8362470542297673962, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
+      propertyPath: timer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8673128567361896466, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -16878,7 +16882,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 953112393, guid: 9845436b9c7e1404491fa09d4feeec95, type: 3}
       propertyPath: t
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 953112393, guid: 9845436b9c7e1404491fa09d4feeec95, type: 3}
       propertyPath: bgm
@@ -18298,7 +18302,7 @@ PrefabInstance:
       objectReference: {fileID: 5081331208570555655}
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: timer
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3317477687133958909, guid: 3daf2d151dcde4e36878429fd0461656, type: 3}
       propertyPath: GameUII

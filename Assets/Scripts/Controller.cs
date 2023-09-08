@@ -29,6 +29,7 @@ public class Controller : MonoBehaviour
         {
             obj.setButtonActive();
         }
+        babyLocked = false;
     }
 
     public void SetObstacleNull()
@@ -245,7 +246,6 @@ public class Controller : MonoBehaviour
         thoughtIn = true;
         yield return new WaitForSeconds(2);
         thoughtOut = true;
-        babyLocked = false;
     }
     private IEnumerator OnTriggerEnter(Collider other)
     {
@@ -269,7 +269,6 @@ public class Controller : MonoBehaviour
             }
 
         }
-        babyLocked = false;
     }
     void startAnimation()
     {

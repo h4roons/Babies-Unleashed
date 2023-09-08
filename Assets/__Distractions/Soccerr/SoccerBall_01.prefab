@@ -94,9 +94,17 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5393294927107203249}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 0.10357375
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &129084892850184699
@@ -111,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ac01f8e03cd4d84807e8cfe4c1caa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTime: 13
+  obstacleTime: 7
   locked: 0
 --- !u!208 &4579926122775016663
 NavMeshObstacle:

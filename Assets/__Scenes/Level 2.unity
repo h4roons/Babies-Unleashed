@@ -5319,6 +5319,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8362470542297673962, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
+      propertyPath: timer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8673128567361896466, guid: 9eca13a4138d6c2478ab3fad82199350, type: 3}
       propertyPath: m_Pivot.x
       value: 0
